@@ -1,0 +1,39 @@
+<html>
+<head><title>OBJECT IDENTIFICATION</title></head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+ <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+<body background="2.jpg">
+<center><h1 class="btn btn-info heading" style="width: 100%; height: 50px; margin-top: 0; font-size:30px;">Object Detection</h1></center>
+<button style="background-color: black; color: white; margin-left: 20; height: 50px; width: 60px;" onclick="back();">BACK</button>
+<center>
+<h3  class="btn btn-danger">Status : Objects Detected</h3>
+<br>
+<h3  class="btn btn-success"></h3>
+</center>
+<script>
+function back(){
+window.location=("1.html");
+}
+var img="";
+function preload() {
+    img=loadImage("m1.jpg");
+    
+}
+function setup() {
+    canvas=createCanvas(620,420);
+    canvas.center();
+}
+function draw() {
+    image(img,0,0,620,420);
+    fill("red");
+    text("bed",45,75);
+    noFill();
+    stroke("red");
+    rect(30,60,450,350);
+}
+</script>
+</body>
+</html>
